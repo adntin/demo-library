@@ -1,0 +1,11 @@
+{
+  "printWidth": 1200,
+  "overrides": [
+    {
+      "files": "**.json",
+      "options": {
+        "editor.formatOnSave": false
+      }
+    }
+  ]
+}

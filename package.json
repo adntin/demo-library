@@ -1,0 +1,35 @@
+{
+  "name": "foundation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/foundation.js",
+  "typings": "./dist/declare/index.d.ts",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "test": "jest",
+    "cp:browser": "cp dist/foundation.js dist/foundation.js.map examples/browser",
+    "cp:node": "cp dist/foundation.js dist/foundation.js.map examples/node",
+    "cp:amd": "cp dist/foundation.js dist/foundation.js.map examples/amd",
+    "cp:esnext": "cp dist/foundation.js dist/foundation.js.map examples/esnext",
+    "browser": "npm run cp:browser && http-server examples/browser",
+    "node": "npm run cp:node && node ./examples/node/index.js",
+    "amd": "npm run cp:amd && http-server examples/amd",
+    "esnext": "npm run cp:esnext && http-server examples/esnext"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ringcentral.com:Fiji/foundation.git"
+  },
+  "author": "devin.lin@ringcentral.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.4",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  }
+}
